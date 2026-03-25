@@ -3,18 +3,11 @@ layout: null
 ---
 
 <!DOCTYPE html>
-<html lang="en" loading="lazy">
+<html lang="en">
 <head loading="lazy">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
  
-  
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#317EFB" />
-{% include head.html %}	
 <!-- awal Seo Otomatis khusus untuk Homepage -->
 <script>
 (function () {
@@ -74,11 +67,19 @@ layout: null
 </script>
 <!-- akhir Seo Otomatis khusus untuk homepage -->
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+<link rel="shortcut icon" href="/icon/01/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/icon/01/apple-touch-icon.png" />
+<link rel="manifest" href="/icon/01/site.webmanifest" />
+
+{% include head.html %}	
 		{% include verif.html %}
   </head>	
-<body loading="lazy">	
-	{% include header1.html %}
-<main loading="lazy">
+<body>
+<div loading="lazy">	
+{% include /ads/gobloggugel/sosmed.html %}
+	{% include /test/file/header.html %}
+<main>
 <article>
 <style>
 /* CARD POST */
@@ -186,7 +187,7 @@ layout: null
 </style>
 
 <center><b>Latest Posts</b></center>
-{% for post in site.categories.main %}
+{% for post in site.categories.test81 %}
 <div class="post-item">
   <h2>
     <a href="{{ post.url }}">
@@ -203,19 +204,15 @@ layout: null
 </div>
 {% endfor %}
 
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Blh0RWCHNXU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-
-
-	{% include /kw/01.html %}
-	
 </article> 
 </main>
 
-   <br /><br />
-<div loading="lazy">
-{% include /ads/gobloggugel/sosmed.html %}
-</div>
+   
+
+
+
 <!--FOOTER-->
 <footer style="text-align: center; padding: 30px 20px; font-size: 16px; color: #666;" loading="lazy">
   <small>
@@ -250,5 +247,6 @@ layout: null
     })();
   </script>
 </footer>
+</div>
 </body>
 </html>
